@@ -34,3 +34,36 @@ document.body.append(h1);
 
 // element ka text content change karo
 h1.textContent = "Hello Ji kaise Ho";
+
+
+
+// event-: agar some action perform hota hai to us action ko event kehte hai
+// Event Listner-: apne koi action ka reaction diya
+// click, mouseover, mouseout, mousemove, keypress, keydown, keyup, load, unload, focus, blur
+
+// click event listner
+h1.querySelector("h1");
+function clickHandler(){
+    h1.style.color = "blue";
+    h1.style.backgroundColor = "yellow";
+};
+h1.addEventListener("click", clickHandler);
+
+//remove event listener
+h1.removeEventListener("click", clickHandler);
+
+// input event listener
+let inp = document.querySelector("input");
+inp.addEventListener("input", function(e){
+    if(e.data != null){
+        console.log(e.data);
+    }
+});
+
+// change event listener-: change event jab koi input text change ho jaye aur fir input box se bahar click kare
+let select = document.querySelector("select");
+let div = document.getElementById("Device");
+select.addEventListener("change", function(e){
+    div.textContent = `${e.target.value} Device selected`;
+    console.log(e.target.value);
+});
