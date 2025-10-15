@@ -67,3 +67,4 @@ select.addEventListener("change", function(e){
     div.textContent = `${e.target.value} Device selected`;
     console.log(e.target.value);
 });
+
